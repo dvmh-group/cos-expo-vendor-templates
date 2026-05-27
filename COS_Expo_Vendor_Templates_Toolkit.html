@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COS Fitness Expo — Vendor Social Templates</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #0f0f1e 100%);
+            color: #fff;
+            padding: 40px 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+            padding-bottom: 40px;
+            border-bottom: 2px solid #55009b;
+        }
+
+        h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+            letter-spacing: -0.02em;
+            text-transform: uppercase;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: #00f2f8;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .intro-text {
+            font-size: 0.95rem;
+            color: #bbb;
+            max-width: 800px;
+            margin: 0 auto 20px;
+            line-height: 1.6;
+        }
+
+        .charity-callout {
+            background: rgba(85, 0, 155, 0.2);
+            border-left: 4px solid #00f2f8;
+            padding: 16px;
+            border-radius: 4px;
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: #ccc;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .charity-callout strong {
+            color: #00f2f8;
+        }
+
+        .templates-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .template-card {
+            background: #0f0f1e;
+            border: 1px solid #55009b;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .template-card:hover {
+            border-color: #00f2f8;
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(0, 242, 248, 0.1);
+        }
+
+        .post-preview {
+            width: 100%;
+            aspect-ratio: 1080/1350;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            font-size: 14px;
+            line-height: 1.4;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .template-info {
+            padding: 20px;
+            background: rgba(85, 0, 155, 0.1);
+            border-top: 1px solid #55009b;
+        }
+
+        .template-number {
+            font-size: 0.8rem;
+            color: #00f2f8;
+            font-weight: 700;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .template-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .template-copy {
+            font-size: 0.9rem;
+            color: #aaa;
+            margin-bottom: 12px;
+            line-height: 1.5;
+        }
+
+        .template-cta {
+            font-size: 0.8rem;
+            color: #00f2f8;
+            font-weight: 600;
+        }
+
+        .customization-guide {
+            background: rgba(0, 242, 248, 0.05);
+            border-left: 3px solid #00f2f8;
+            padding: 15px;
+            margin-top: 12px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+        }
+
+        .customize-label {
+            color: #00f2f8;
+            font-weight: 600;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            letter-spacing: 0.1em;
+        }
+
+        .customize-items {
+            color: #999;
+            list-style: none;
+        }
+
+        .customize-items li {
+            padding: 4px 0;
+            padding-left: 16px;
+            position: relative;
+        }
+
+        .customize-items li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #00f2f8;
+        }
+
+        /* Template Style Variations */
+        .style-purple-primary {
+            background: linear-gradient(135deg, #55009b 0%, #3d006d 100%);
+            color: #fff;
+        }
+
+        .style-purple-secondary {
+            background: linear-gradient(135deg, #3d006d 0%, #2a004a 100%);
+            color: #fff;
+        }
+
+        .style-purple-dark {
+            background: #1a0033;
+            color: #fff;
+        }
+
+        .style-light-clean {
+            background: #f5f5f5;
+            color: #000;
+        }
+
+        .headline {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.8rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 15px;
+            letter-spacing: -0.01em;
+            text-transform: uppercase;
+        }
+
+        .subheadline {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .body-text {
+            font-size: 1.1rem;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        .accent-text {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #00f2f8;
+            text-transform: uppercase;
+        }
+
+        .date-info {
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin: 10px 0;
+        }
+
+        .booth-number {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #00f2f8;
+            margin: 10px 0;
+            text-transform: uppercase;
+        }
+
+        .discount-badge {
+            display: inline-block;
+            background: #00f2f8;
+            color: #55009b;
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin: 15px 0;
+            text-transform: uppercase;
+        }
+
+        .logo-placeholder {
+            font-size: 0.8rem;
+            color: #999;
+            margin: 10px 0;
+            padding: 8px;
+            border: 1px dashed #666;
+            border-radius: 4px;
+        }
+
+        .instructions {
+            background: #0f0f1e;
+            border: 1px solid #55009b;
+            border-radius: 8px;
+            padding: 40px;
+            margin-top: 60px;
+        }
+
+        .instructions h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+        }
+
+        .instructions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .instruction-card {
+            background: rgba(0, 242, 248, 0.05);
+            padding: 20px;
+            border-radius: 6px;
+            border-left: 3px solid #00f2f8;
+        }
+
+        .instruction-card h3 {
+            color: #00f2f8;
+            margin-bottom: 10px;
+            font-size: 1rem;
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .instruction-card p {
+            font-size: 0.95rem;
+            color: #aaa;
+            line-height: 1.6;
+        }
+
+        .section-divider {
+            margin: 40px 0;
+            padding: 40px 0;
+            border-top: 2px solid #55009b;
+            border-bottom: 2px solid #55009b;
+        }
+
+        .section-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            color: #00f2f8;
+        }
+
+        .email-template, .caption-library, .posting-schedule {
+            background: rgba(85, 0, 155, 0.1);
+            padding: 30px;
+            border-radius: 6px;
+            border-left: 4px solid #00f2f8;
+            margin-bottom: 40px;
+        }
+
+        .email-template h3, .caption-library h3, .posting-schedule h3 {
+            font-family: 'Montserrat', sans-serif;
+            color: #00f2f8;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            font-size: 0.95rem;
+            letter-spacing: 0.1em;
+        }
+
+        .email-template p, .caption-library p, .posting-schedule p {
+            color: #ccc;
+            line-height: 1.7;
+            font-size: 0.95rem;
+            margin-bottom: 12px;
+        }
+
+        .code-block {
+            background: #1a1a2e;
+            padding: 20px;
+            border-radius: 4px;
+            overflow-x: auto;
+            font-family: 'Courier New', monospace;
+            font-size: 0.85rem;
+            color: #00f2f8;
+            margin: 15px 0;
+            line-height: 1.6;
+        }
+
+        .caption-list {
+            list-style: none;
+            margin: 15px 0;
+        }
+
+        .caption-list li {
+            padding: 10px 0;
+            padding-left: 20px;
+            position: relative;
+            color: #bbb;
+            border-bottom: 1px solid rgba(0, 242, 248, 0.1);
+        }
+
+        .caption-list li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #00f2f8;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 2px solid #55009b;
+            color: #777;
+            font-size: 0.9rem;
+        }
+
+        .footer a {
+            color: #00f2f8;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .brand-note {
+            background: rgba(0, 242, 248, 0.1);
+            border: 1px solid #00f2f8;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 20px 0;
+            font-size: 0.9rem;
+            color: #ccc;
+        }
+
+        .brand-note strong {
+            color: #00f2f8;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #55009b;
+            margin: 40px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <p class="subtitle">COS Fitness Expo</p>
+            <h1>Vendor Social Templates</h1>
+            <p class="intro-text">
+                10 ready-to-customize social media post templates designed specifically for COS Fitness Expo vendors and sponsors. 
+                Swap in your logo, booth number, and offer. All assets are yours to use.
+            </p>
+            <div class="charity-callout">
+                <strong>⚠️ Important Brand Rule:</strong> "100% of ticket proceeds benefit Pikes Peak Suicide Prevention. When you buy a ticket, you're not just coming to an event. You're saving a life." This messaging must appear in every Expo post — no exceptions.
+            </div>
+        </header>
+
+        <div class="templates-grid">
+            <!-- Template 1: Booth Presence - Direct -->
+            <div class="template-card">
+                <div class="post-preview style-purple-primary">
+                    <div>
+                        <p class="logo-placeholder">[YOUR LOGO]</p>
+                        <p class="headline">See us at<br/>Booth #___</p>
+                        <p class="body-text">COS Fitness Expo<br/>August 22–23, 2026</p>
+                        <p class="date-info">Great Wolf Lodge, Colorado Springs</p>
+                    </div>
+                </div>
+                <div class="template-info">
+                    <p class="template-number">Template 1</p>
+                    <p class="template-title">Booth Presence — Direct</p>
+                    <p class="template-copy">Simple, bold call to find your booth at the expo.</p>
+                    <p class="template-cta">Best for: Quick visibility</p>
+                    <div class="customization-guide">
+                        <p class="customize-label">Customize:</p>
+                        <ul class="customize-items">
+                            <li>Add your logo (top center)</li>
+                            <li>Insert your booth number</li>
+                            <li>Update colors to match your brand if desired</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Template 2: Live Demo -->
+            <div class="template-card">
+                <div class="post-preview" style="background: linear-gradient(135deg, #55009b 0%, #0261c6 100%);">
+                    <div>
+                        <p class="subheadline" style="color: #00f2f8;">Don't Miss Out</p>
+                        <p class="headline">Live Demos<br/>Booth #___</p>
+                        <p class="body-text" style="margin-top: 25px;">See [YOUR SERVICE] in action</p>
+                        <p class="date-info">August 22–23 | Great Wolf Lodge</p>
+                        <p style="margin-top: 20px; font-weight: 600;">We'll be there. Will you?</p>
+                    </div>
+                </div>
+                <div class="template-info">
+                    <p class="template-number">Template 2</p>
+                    <p class="template-title">Live Demo — Showcase</p>
+                    <p class="template-copy">Creates curiosity about what you're demonstrating.</p>
+                    <p class="template-cta">Best for: Drawing foot traffic</p>
+                    <div class="customization-guide">
+                        <p class="customize-label">Customize:</p>
+                        <ul class="customize-items">
+                            <li>Replace [YOUR SERVICE] with your specific offer</li>
+                            <li>Add booth number</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Template 3: Signup Incentive -->
+            <div class="template-card">
+                <div class="post-preview style-light-clean">
+                    <div style="color: #000;">
+                        <p class="logo-placeholder" style="color: #000; border-color: #55009b;">Your Logo Here</p>
+                        <p class="headline" style="color: #55009b;">Early Bird<br/>Special</p>
+                        <p class="body-text" style="color: #333; margin-top: 20px;">Sign up today and get</p>
+                        <div class="discount-badge">[DISCOUNT %] OFF</div>
+                        <p class="body-text" style="color: #333;">COS Fitness Expo<br/>Aug 22–23</p>
+                        <p style="color: #55009b; font-weight: 600; font-family: 'Montserrat', sans-serif;">Limited Time Offer</p>
+                    </div>
+                </div>
+                <div class="template-info">
+                    <p class="template-number">Template 3</p>
+                    <p class="template-title">Signup Incentive</p>
+                    <p class="template-copy">Drive registrations with a clear discount hook.</p>
+                    <p class="template-cta">Best for: Lead generation</p>
+                    <div class="customization-guide">
+                        <p class="customize-label">Customize:</p>
+                        <ul class="customize-items">
+                            <li>Add your logo (top)</li>
+                            <li>Insert discount percentage or offer</li>
+                            <li>Add link to signup in caption</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Template 4: Product Reveal -->
+            <div class="template-card">
+                <div class="post-preview" style="background: linear-gradient(180deg, rgba(85,0,155,0.6) 0%, rgba(0,0,0,0.8) 100%), #1a0033;">
+                    <div>
+                        <p class="subheadline" style="color: #00f2f8;">August 22–23</p>
+                        <p class="headline" style="color: #fff;">We're Bringing<br/>[FEATURE]<br/>to COS</p>
+                        <p class="body-text" style="margin-top: 25px; color: #ccc;">See it first at the Expo</p>
+                        <p style="font-size: 0.95rem; margin-top: 20px; color: #999;">Booth #___ | Great Wolf Lodge</p>
+                        <p class="accent-text" style="margin-top: 15px;">Save the date</p>
+                    </div>
+                </div>
+                <div class="template-info">
+                    <p class="template-number">Template 4</p>
+                    <p class="template-title">Product/Service Reveal</p>
+                    <p class="template-copy">Build anticipation for what you're unveiling.</p>
+                    <p class="template-cta">Best for: Generating hype</p>
+                    <div class="customization-guide">
+                        <p class="customize-label">Customize:</p>
+                        <ul class="customize-items">
+                            <li>Replace [FEATURE] with your announcement</li>
+                            <li>Add booth number</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Template 5: Speaking/Hosting -->
+            <div class="template-card">
+                <div class="post-preview style-purple-primary">
+                    <div>
+                        <p style="font-size: 0.9rem; color: #00f2f8; font-weight: 700; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.1em;">I'm Speaking</p>
+                        <p class="headline">Join Me at the<br/>COS Fitness Expo</p>
+                        <p class="subheadline" style="color: #00f2f8; font-size: 1.2rem; margin-top: 25px;">August 22–23</p>
+                        <p class="body-text" style="margin-top: 15px;">Come hear [TOPIC]<br/>from [YOUR NAME]</p>
+                        <p style="font-weight: 600; font-size: 0.95rem;">Great Wolf Lodge</p>
+                        <p style="font-size: 0.9rem; color: #aaa; margin-top: 15px;">Learn more → link in bio</p>
+                    </div>
+                </div>
+                <div class="template-info">
+                    <p class="template-number">Template 5</p>
+                    <p class="template-title">Speaking/Hosting</p>
+                    <p class="template-copy">Position yourself as the expert attendees came to hear.</p>
+                    <p class="template-cta">Best for: Thought leadership</p>
+                    <div class="customization-guide">
+                        <p class="customize-label">Customize:</p>
+                        <ul class="customize-items">
+                            <li>Insert topic you're speaking on</li>
+                            <li>Add your name</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Template 6: Support Local -->
+            <div class="template-card">
+                <div class="post-preview" style="background: linear-gradient(135deg, #0261c6 0%, #55009b 100%);">
+                    <div>
+                        <p class="headline">Support Local</p>
+                        <p class="body-text" style="margin-top: 30px;">Come see us at the<br/>COS Fitness Expo</p>
+                        <p class="booth-number">Booth #___</p>
+                        <p class="body-text" style="margin-bottom: 0;">August 22–23<br/>Great Wolf Lodge</p>
+                        <p style="font-weight: 600; margin-top: 20px; color: #00f2f8; text-transform: uppercase; font-size: 0.95rem;">Benefiting Pikes Peak Suicide Prevention</p>
+                    </div>
+                </div>
+                <div class="template-info">
+                    <p class="template-number">Template 6</p>
+                    <p class="template-title">Support Local Angle</p>
+                    <p class="template-copy">Emphasize the charitable impact of the expo.</p>
+                    <p class="template-cta">Best for: Community-focused brands</p>
+                    <div class="customization-guide">
+                        <p class="customize-label">Customize:</p>
+                        <ul class="customize-items">
+                            <li>Add booth number</li>
+                            <li>Optional: add your logo</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Template 7: Countdown -->
+            <div class="template-card">
+                <div class="post-preview" style="background: linear-gradient(180deg, rgba(85,0,155,0.5) 0%, rgba(0,0,0,0.9) 100%), #1a0033;">
+                    <div>
+                        <p style="font-size: 0.9rem; color: #00f2f8; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em;">Save the Date</p>
+                        <p class="headline" style="margin-top: 15px;">COS Fitness Expo<br/>Is Here</p>
+                        <p class="subheadline" style="color: #00f2f8; margin-top: 25px;">Aug 22–23, 2026</p>
+                        <p class="body-text" style="margin-top: 20px; color: #ccc;">See [YOUR COMPANY] live</p>
+                        <p style="font-weight: 600; color: #fff;">Don't miss out</p>
+                    </div>
+                </div>
+                <div class="template-info">
+                    <p class="template-number">Template 7</p>
+                    <p class="template-title">Countdown/Urgency</p>
+                    <p class="template-copy">Create FOMO in the final push weeks.</p>
+                    <p class="template-cta">Best for: Last-minute promotion</p>
+                    <div class="customization-guide">
+                        <p class="customize-label">Customize:</p>
+                        <ul class="customize-items">
+                            <li>Replace [YOUR COMPANY] with your brand name</li>
+                            <li>Adjust dates (e.g., "2 weeks away")</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Template 8: Expert Q&A -->
+            <div class="template-card">
+                <div class="post-preview style-light-clean">
+                    <div style="color: #000;">
+                        <p style="color: #55009b; font-weight: 700; font-family: 'Montserrat', sans-serif; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.1em;">Expert Resource</p>
+                        <p class="headline" style="color: #55009b; margin-top: 15px;">Ask Us<br/>Anything</p>
+                        <p class="body-text" style="color: #333; margin-top: 25px;">We'll be at the COS Fitness Expo ready to answer your questions about [YOUR EXPERTISE]</p>
+                        <p style="color: #000; font-weight: 700; font-family: 'Montserrat', sans-serif; text-transform: uppercase; font-size: 0.95rem;">Booth #___<br/>August 22–23</p>
+                        <p style="color: #55009b; font-weight: 700; margin-top: 20px; font-family: 'Montserrat', sans-serif;">See you there</p>
+                    </div>
+                </div>
+                <div class="template-info">
+                    <p class="template-number">Template 8</p>
+                    <p class="template-title">Expert Q&A</p>
+                    <p class="template-copy">Position as a resource attendees should seek out.</p>
+                    <p class="template-cta">Best for: Service providers & coaches</p>
+                    <div class="customization-guide">
+                        <p class="customize-label">Customize:</p>
+                        <ul class="customize-items">
+                            <li>Replace [YOUR EXPERTISE] with your specialization</li>
+                            <li>Add booth number</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Template 9: Exclusive Offer -->
+            <div class="template-card">
+                <div class="post-preview style-purple-secondary">
+                    <div>
+                        <p style="font-size: 1.3rem; color: #00f2f8; font-weight: 800; font-family: 'Montserrat', sans-serif; text-transform: uppercase;">Exclusive</p>
+                        <p class="headline" style="margin-top: 10px;">Expo-Only Deal</p>
+                        <p class="body-text" style="margin-top: 25px;">[OFFER DETAILS]<br/>Available only at our booth</p>
+                        <p class="booth-number" style="margin-top: 20px;">Booth #___</p>
+                        <p style="font-size: 0.95rem; color: #aaa;">Aug 22–23 | Great Wolf Lodge</p>
+                        <p class="accent-text" style="margin-top: 15px;">Supplies Limited</p>
+                    </div>
+                </div>
+                <div class="template-info">
+                    <p class="template-number">Template 9</p>
+                    <p class="template-title">Exclusive Offer</p>
+                    <p class="template-copy">Drive booth visits with a limited-time exclusive.</p>
+                    <p class="template-cta">Best for: Retail or service promotions</p>
+                    <div class="customization-guide">
+                        <p class="customize-label">Customize:</p>
+                        <ul class="customize-items">
+                            <li>Replace [OFFER DETAILS] with your specific deal</li>
+                            <li>Add booth number</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Template 10: Multi-Vendor Collab -->
+            <div class="template-card">
+                <div class="post-preview" style="background: linear-gradient(180deg, rgba(85,0,155,0.4) 0%, rgba(0,0,0,0.85) 100%), #1a0033;">
+                    <div>
+                        <p style="font-size: 0.9rem; color: #00f2f8; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em;">Coming Together</p>
+                        <p class="headline" style="margin-top: 15px;">The Biggest Fitness<br/>Event in Colorado</p>
+                        <p class="body-text" style="margin-top: 25px; color: #ccc;">See us and industry leaders at COS Fitness Expo</p>
+                        <p style="font-weight: 600; color: #fff;">August 22–23</p>
+                        <p class="accent-text" style="margin-top: 20px;">Booth #___</p>
+                    </div>
+                </div>
+                <div class="template-info">
+                    <p class="template-number">Template 10</p>
+                    <p class="template-title">Multi-Vendor Collab</p>
+                    <p class="template-copy">Emphasize the scale and community of the event.</p>
+                    <p class="template-cta">Best for: Community building</p>
+                    <div class="customization-guide">
+                        <p class="customize-label">Customize:</p>
+                        <ul class="customize-items">
+                            <li>Name other prominent vendors (optional)</li>
+                            <li>Add booth number</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- INSTRUCTIONS & GUIDES SECTION -->
+        <div class="section-divider"></div>
+
+        <div class="section-title">How to Use These Templates</div>
+
+        <div class="instructions-grid">
+            <div class="instruction-card">
+                <h3>1. Choose Your Angle</h3>
+                <p>Pick 1–3 templates that match your goals. Want booth traffic? Use 1, 2, or 6. Want signups? Use 3. Want to position yourself? Use 5 or 8.</p>
+            </div>
+            <div class="instruction-card">
+                <h3>2. Customize Copy</h3>
+                <p>Swap in your booth number, discount, or service. Keep headlines punchy (under 8 words). Follow the customization guide in each template.</p>
+            </div>
+            <div class="instruction-card">
+                <h3>3. Add Your Logo & Brand</h3>
+                <p>Logo goes where marked [YOUR LOGO]. Swap in your colours if desired. Keep it clean and readable on mobile.</p>
+            </div>
+            <div class="instruction-card">
+                <h3>4. Add Charity Message</h3>
+                <p>Include in your caption: "100% of ticket proceeds benefit Pikes Peak Suicide Prevention." This is required in every Expo post.</p>
+            </div>
+            <div class="instruction-card">
+                <h3>5. Choose Your Platform</h3>
+                <p>Use these in Canva, Photoshop, Adobe XD, or any design tool. Dimensions are 1080×1350px (Instagram portrait).</p>
+            </div>
+            <div class="instruction-card">
+                <h3>6. Post & Track</h3>
+                <p>Post to Instagram, Facebook, or LinkedIn. Watch which templates get engagement. Repeat what works. All copy is yours to adapt.</p>
+            </div>
+        </div>
+
+        <!-- EMAIL TEMPLATE -->
+        <div class="section-divider"></div>
+        <div class="section-title">Email Template (Copy & Paste)</div>
+
+        <div class="email-template">
+            <h3>Email Subject:</h3>
+            <div class="code-block">COS Fitness Expo — 10 Free Social Media Templates for Your Booth</div>
+
+            <h3 style="margin-top: 25px;">Email Body:</h3>
+            <div class="code-block">
+Hi [VENDOR NAME],
+
+We've created 10 free social media post templates to help you promote COS Fitness Expo and your booth. Everything you need is right here.
+
+📱 WHAT'S INSIDE:
+✓ 10 ready-to-customize post designs
+✓ Copy specs & customization guide
+✓ Caption ideas ready to paste
+✓ Design assets & brand guidelines
+
+⚡ QUICK START:
+1. View the template gallery
+2. Pick 1–3 templates that fit your booth
+3. Customize with your booth number + offer
+4. Post to Instagram, Facebook, or LinkedIn
+
+🎁 All templates are 1080×1350px (Instagram standard).
+You can use them in Canva, Photoshop, or any design tool.
+
+📌 IMPORTANT:
+Every Expo post must include this messaging:
+"100% of ticket proceeds benefit Pikes Peak Suicide Prevention. When you buy a ticket, you're not just coming to an event. You're saving a life."
+
+✉️ Questions? Reply to this email.
+
+Can't wait to see you at the expo!
+
+[Your Name]
+COS Fitness Expo
+            </div>
+        </div>
+
+        <!-- CAPTION LIBRARY -->
+        <div class="section-divider"></div>
+        <div class="section-title">Caption Ideas (Copy & Paste)</div>
+
+        <div class="caption-library">
+            <h3>Booth Traffic</h3>
+            <ul class="caption-list">
+                <li>"Find us at Booth #___ Aug 22–23. We can't wait to see you there. 100% of ticket proceeds benefit Pikes Peak Suicide Prevention."</li>
+                <li>"Come say hi. Booth #___ at COS Fitness Expo. See you soon!"</li>
+                <li>"Meet us at the biggest fitness event in Colorado. Booth #___. Aug 22–23."</li>
+            </ul>
+
+            <h3 style="margin-top: 25px;">Lead Generation/Signup</h3>
+            <ul class="caption-list">
+                <li>"Sign up for early bird pricing. Link in bio. COS Fitness Expo Aug 22–23. Every ticket sold helps Pikes Peak Suicide Prevention."</li>
+                <li>"Limited spots at early pricing. Secure yours now. Link in bio."</li>
+                <li>"Get your [DISCOUNT]% discount when you sign up. Link in bio."</li>
+            </ul>
+
+            <h3 style="margin-top: 25px;">Speaking/Positioning</h3>
+            <ul class="caption-list">
+                <li>"I'm speaking on [TOPIC] at COS Fitness Expo Aug 22–23. Come hear from [YOUR NAME] at Booth #___."</li>
+                <li>"Presenting [TOPIC] at the expo. Save your spot. Link in bio."</li>
+                <li>"Expert session: [TOPIC] with [YOUR NAME]. COS Fitness Expo."</li>
+            </ul>
+
+            <h3 style="margin-top: 25px;">Countdown/Urgency</h3>
+            <ul class="caption-list">
+                <li>"___ days until COS Fitness Expo. Booth #___. Mark your calendar. Every ticket sold benefits Pikes Peak Suicide Prevention."</li>
+                <li>"It's this weekend. See us at the expo."</li>
+                <li>"Last chance for early pricing. Ends [DATE]. Link in bio."</li>
+            </ul>
+
+            <h3 style="margin-top: 25px;">Community/Charity</h3>
+            <ul class="caption-list">
+                <li>"Every ticket sold benefits Pikes Peak Suicide Prevention. Support local fitness + a local cause. Booth #___ Aug 22–23."</li>
+                <li>"Come support [CAUSE] at COS Fitness Expo. 100% of proceeds donated."</li>
+                <li>"When you buy a ticket, you're not just coming to an event. You're saving a life. 💜 #MentalHealthMatters"</li>
+            </ul>
+
+            <h3 style="margin-top: 25px;">Exclusivity</h3>
+            <ul class="caption-list">
+                <li>"Expo-only offer: [DEAL]. Available Aug 22–23 only. Booth #___. Supplies limited."</li>
+                <li>"Limited to first [NUMBER] attendees. Booth #___. Get there early."</li>
+                <li>"This deal is ONLY at the expo. Aug 22–23. Booth #___."</li>
+            </ul>
+        </div>
+
+        <!-- POSTING SCHEDULE -->
+        <div class="section-divider"></div>
+        <div class="section-title">Posting Schedule Recommendation</div>
+
+        <div class="posting-schedule">
+            <h3>WEEKS 8-6 BEFORE EVENT (Early-Mid July)</h3>
+            <p><strong>Frequency:</strong> 1 post per week</p>
+            <p><strong>What to post:</strong> Mix of Templates 1, 2, 4 (booth presence, demos, reveals)</p>
+            <p><strong>Goal:</strong> Build awareness</p>
+
+            <h3 style="margin-top: 25px;">WEEKS 5-2 BEFORE EVENT (Late July)</h3>
+            <p><strong>Frequency:</strong> 2 posts per week</p>
+            <p><strong>What to post:</strong> Templates 3, 5, 6 (signups, speaking, community)</p>
+            <p><strong>Goal:</strong> Drive signups & position yourself</p>
+
+            <h3 style="margin-top: 25px;">FINAL 2 WEEKS (Aug 8-22)</h3>
+            <p><strong>Frequency:</strong> 4-5 posts per week + daily Stories</p>
+            <p><strong>What to post:</strong> Templates 7, 9 (countdown, exclusive offers), repeat best performers</p>
+            <p><strong>Goal:</strong> Create urgency & drive booth traffic</p>
+
+            <h3 style="margin-top: 25px;">WEEK OF EVENT (Aug 22-23)</h3>
+            <p><strong>Frequency:</strong> 2-3 daily Stories + 1 Reel</p>
+            <p><strong>What to post:</strong> Live from your booth, real-time updates, behind-the-scenes</p>
+            <p><strong>Goal:</strong> Activate attendees & share the experience</p>
+
+            <div class="brand-note" style="margin-top: 25px;">
+                <strong>Pro Tip:</strong> Pick 2-3 templates and rotate them. Don't use all 10. Focus on what works for your audience. Save & share the templates that get the most engagement.
+            </div>
+        </div>
+
+        <!-- DESIGN SPECS -->
+        <div class="section-divider"></div>
+        <div class="section-title">Technical Specs</div>
+
+        <div class="instructions">
+            <h3>Dimensions & Setup</h3>
+            <ul class="caption-list">
+                <li><strong>Carousels & Single Posts:</strong> 1080 × 1350px (Instagram portrait)</li>
+                <li><strong>Stories:</strong> 1080 × 1920px (if you adapt for Stories)</li>
+                <li><strong>Color Space:</strong> sRGB (for Instagram compatibility)</li>
+                <li><strong>File Format:</strong> PNG or JPG (under 5MB)</li>
+                <li><strong>DPI:</strong> 72–96 DPI is fine for social</li>
+            </ul>
+
+            <h3 style="margin-top: 25px;">Brand Colors (Use These)</h3>
+            <ul class="caption-list">
+                <li><strong>Deep Purple:</strong> #55009B (primary background)</li>
+                <li><strong>Electric Cyan:</strong> #00F2F8 (energy/accents)</li>
+                <li><strong>Royal Blue:</strong> #0261C6 (secondary headlines)</li>
+                <li><strong>Black:</strong> #000000 (text/contrast)</li>
+                <li><strong>White:</strong> #FFFFFF (breathing room)</li>
+            </ul>
+
+            <h3 style="margin-top: 25px;">Typography</h3>
+            <ul class="caption-list">
+                <li><strong>Headlines:</strong> Montserrat 800 (bold, all caps), 52px minimum</li>
+                <li><strong>Body Text:</strong> Open Sans 400 (regular), 32px minimum</li>
+                <li><strong>CTAs:</strong> Montserrat 700 (bold, all caps)</li>
+            </ul>
+
+            <h3 style="margin-top: 25px;">Design Rules</h3>
+            <ul class="caption-list">
+                <li>Minimum 4.5:1 contrast ratio for all text</li>
+                <li>No text in bottom 120px (Instagram UI overlap)</li>
+                <li>Minimum 60px padding on all sides (80px preferred)</li>
+                <li>Keep one idea per slide — don't overcrowd</li>
+                <li>Test text readability on mobile before posting</li>
+            </ul>
+        </div>
+
+        <div class="footer">
+            <p>COS Fitness Expo — August 22–23, 2026 | Great Wolf Lodge, Colorado Springs</p>
+            <p style="margin-top: 15px;"><strong>Benefiting Pikes Peak Suicide Prevention</strong></p>
+            <p style="margin-top: 10px;">Questions? Contact <a href="mailto:contact@sandigriffin.com">contact@sandigriffin.com</a></p>
+            <p style="margin-top: 10px; color: #666; font-size: 0.85rem;">© 2026 COS Fitness Expo. All assets are free to use and modify for promotional purposes.</p>
+        </div>
+    </div>
+</body>
+</html>
