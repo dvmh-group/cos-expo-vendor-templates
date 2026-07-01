@@ -1,0 +1,7 @@
+# Google Drive sync artifacts
+desktop.ini
+
+# IDE plugin artifacts
+.qodo/
+.claude/
+.vercel
